@@ -9,10 +9,8 @@ const displayMessage = message => {
 // EVENT LISTENERS
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
 
   if (!guess) {
-    // document.querySelector('.message').textContent = 'No number ⛔️';
     displayMessage('No number ⛔️');
   } else if (guess === secretNumber) {
     displayMessage('🎉 Correct Number!');
@@ -46,7 +44,6 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  console.log('again was clicked');
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
